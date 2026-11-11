@@ -1,0 +1,4 @@
+# Cloudflare Worker settings (deploy with: npx wrangler deploy)
+name = "felicity-loreal-chatbot"
+main = "worker.js"
+compatibility_date = "2026-10-01"

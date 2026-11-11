@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felicity | L'Oréal Beauty Advisor</title>
+    <meta
+      name="description"
+      content="Felicity is an AI beauty advisor for L'Oréal products, focused on clean, plant-powered ingredients."
+    />
+
+    <!-- Icons (send button) -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Fonts: Cormorant Garamond for elegant headings, Montserrat for body text -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!------- Header / Branding ------->
+      <header class="site-header">
+        <img
+          src="img/loreal-logo.png"
+          alt="L'Oréal"
+          class="logo"
+          width="500"
+          height="91"
+        />
+        <div class="gold-rule" aria-hidden="true"></div>
+        <h1 class="site-title">Felicity</h1>
+        <p class="site-subtitle">Your Clean Beauty Advisor</p>
+        <p class="tagline">
+          Plant-powered ingredients, honest benefits, and routines that are kind
+          to your skin and the planet.
+        </p>
+      </header>
+
+      <!------- Chat Area ------->
+      <main>
+        <section class="chatbox" aria-label="Chat with Felicity">
+          <!-- LevelUp: shows the user's latest question above the reply -->
+          <div id="latestQuestion" class="latest-question" hidden>
+            <span class="latest-label">You asked</span>
+            <span id="latestText" class="latest-text"></span>
+          </div>
+
+          <!-- Messages are added here by script.js -->
+          <div
+            id="chatWindow"
+            class="chat-window"
+            aria-live="polite"
+            aria-label="Conversation"
+          ></div>
+
+          <!-- Quick-start suggestion buttons -->
+          <div id="suggestions" class="suggestions">
+            <button type="button" class="chip">
+              Build me a clean skincare routine
+            </button>
+            <button type="button" class="chip">
+              Which products use plant-based ingredients?
+            </button>
+            <button type="button" class="chip">
+              Gentle haircare for a dry scalp
+            </button>
+            <button type="button" class="chip">
+              What does hyaluronic acid actually do?
+            </button>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <label for="userInput" class="visually-hidden">Message</label>
+            <input
+              id="userInput"
+              name="userInput"
+              type="text"
+              placeholder="Ask Felicity about products, ingredients, or routines…"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="sendBtn" aria-label="Send">
+              <span class="material-icons" aria-hidden="true">send</span>
+            </button>
+          </form>
+        </section>
+      </main>
+
+      <!------- Footer Links ------->
+      <footer class="site-footer">
+        <p>
+          A student project built for learning. Not affiliated with L'Oréal.
+          Felicity is an AI and can make mistakes, so always check product
+          labels and patch test new products.
+        </p>
+        <nav>
+          <!-- These URLs are placeholders -->
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Contact</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
