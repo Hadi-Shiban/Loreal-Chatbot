@@ -100,7 +100,9 @@ function addMessage(role, text) {
   const body = role === "user" ? `<p>${escapeHTML(text)}</p>` : formatReply(text);
   bubble.innerHTML = `<span class="who">${name}</span>${body}`;
   chatWindow.appendChild(bubble);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
+  // User messages scroll to the bottom; Felicity's replies scroll to their first line
+  chatWindow.scrollTop =
+    role === "user" ? chatWindow.scrollHeight : bubble.offsetTop - 8;
   return bubble;
 }
 
